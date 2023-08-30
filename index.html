@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React N </title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- <div id="root">
+        <p>Not Rendered</p>
+    </div> -->
+    <div  id="root">
+    <div id="container">
+        <p>Not Rendered</p>
+        <!-- <h1>Heading 1</h1>
+        <h2>Heading 2</h2> -->
+
+    </div>
+    </div>
+</body>
+
+<!-- Don't These React CDN because we installed it with npm react react-dom -->
+
+<!-- <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script> -->
+
+<!-- Doing Things with Javascript -->
+<!-- <script>
+   const root= document.getElementById("root")
+   const heading=document.createElement("h1");
+   heading.innerHTML="Hello World";
+
+   root.appendChild(heading);
+</script> -->
+
+<!-- //////////////////////////////// -->
+
+<!-- Now Doing things With React Using CDN -->
+<!-- <script>
+    const heading1=React.createElement("h1",{},"This is Heading1 created with React");
+    const heading2=React.createElement("h2",{},"This is Heading2 created with React");
+    const container=React.createElement("div",{
+        id:"container"
+    },[heading1,heading2])
+
+    const root=ReactDOM.createRoot(document.getElementById("root"));
+
+    // pass heading or container inside in the root
+
+
+   root.render(container);
+
+
+</script> -->
+
+<!-- Connecting with external tag  -->
+
+<script type="module" src="src/App.js"></script>
+
+
+</html>
