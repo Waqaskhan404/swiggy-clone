@@ -5,6 +5,7 @@ import Body from "./components/Body";
 import { Footer } from "./components/Footer";
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
 import About from "./components/About"
+import { lazy } from "react";
 import Contact from "./components/Contact"
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
@@ -13,6 +14,8 @@ import RestaurantMenu from "./components/RestaurantMenu";
 // const container=React.createElement("div",{
 //     id:"container"
 // },[heading1,heading2])
+
+
 
 
 
