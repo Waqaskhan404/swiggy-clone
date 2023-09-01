@@ -3,27 +3,21 @@ import { useEffect, useState } from "react";
 import RestaurantCard from "./ResturentCardData";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import { filterData } from '../utils/Helper';
+import { GET_ALL_RESTAURANT_DATA } from "../constants";
+
 
 const Body = () => {
     const [searchTxt,setSearchTxt]=useState("");
     const [filterItem,setFilterItem]=useState([]);
     const [allRestaurants,setAllRestaurants]=useState([]);
-
-     function filterData(searchText, allRestaurants) {
-      const filterData = allRestaurants.filter((restaurant) =>
-        restaurant?.info?.name?.toLowerCase()?.includes(searchText.toLowerCase())
-      );
-    
-      return filterData;
-    }
-
     useEffect(() => {
     getRestaurants();
   }, []);
 
   async function getRestaurants() {
     const data = await fetch(
-      "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.5270362&lng=77.13593279999999&page_type=DESKTOP_WEB_LISTING"
+      GET_ALL_RESTAURANT_DATA
     );
     const json = await data.json();
     // console.log(json?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
