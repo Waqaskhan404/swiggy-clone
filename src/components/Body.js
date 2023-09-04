@@ -42,21 +42,21 @@ const Body = () => {
     (
 
      <>
-    <div className="search-container">
-        <input type="text" placeholder="Search" value={searchTxt} onChange={(e)=>setSearchTxt(e.target.value)}/>
-    <button onClick={()=>{
+    <div className="bg-pink-400 my-4 h-14 text-center py-2 ">
+        <input className="px-6 mr-3 border-2 border-[transparent] rounded-md" type="text" placeholder="Search" value={searchTxt} onChange={(e)=>setSearchTxt(e.target.value)}/>
+    <button className="rounded-md p-2 bg-purple-600" onClick={()=>{
     const data=filterData(searchTxt,allRestaurants)
     setFilterItem(data)
     }
     }>Search</button>
     </div>
 
-    <div className="card-main">  
+    <div className="flex gap-4 flex-wrap  text-center">  
     {
     filterItem?.length===0 ?  <h1>No Restaurant found</h1> :
       filterItem?.map((restaurant,index)=>{
         // console.log(restaurant.info)
-        return <Link className="card" to={"/restaurantmenu/"+restaurant.info.id} key={index}><RestaurantCard {...restaurant?.info}  /></Link>
+        return <Link  to={"/restaurantmenu/"+restaurant.info.id} key={index}><RestaurantCard {...restaurant?.info}  /></Link>
         // return <RestaurantCard {...restaurant?.info}key={index}  />
 
       })

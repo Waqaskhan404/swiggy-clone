@@ -32,7 +32,7 @@ const RestaurantCardData = ({
     lastMileTravelString,
   }) => {
     return (
-      <div>
+      <div className="w-72 rounded-lg overflow-hidden shadow-md transition-transform transform-gpu hover:scale-105 ">
         <img
           src={
             "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
