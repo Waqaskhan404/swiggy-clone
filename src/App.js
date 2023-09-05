@@ -9,6 +9,7 @@ import { lazy } from "react";
 import Contact from "./components/Contact"
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Instamart from "./components/Instamart";
 // const heading1=React.createElement("h1",{},"This is Heading1 created with React");
 // const heading2=React.createElement("h2",{},"This is Heading2 created with React");
 // const container=React.createElement("div",{
@@ -57,6 +58,10 @@ const appRoute=createBrowserRouter([
       {
         path:"/restaurantmenu/:id",
         element:<RestaurantMenu/>,
+      },
+      {
+        path:"/instamart",
+        element:<Instamart/>,
       }
 
     ]

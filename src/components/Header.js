@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const [isLogin,setIsLogin]=useState(false);
+
+  const {user}=useContext(UserContext)
     return (
       <>
       <div className="flex justify-between h-16 bg-pink-400 items-center text-[#ffff] px-9 shadow-md">
@@ -14,8 +17,12 @@ const Header = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/about">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/instamart">Instamart</Link></li>
             <li>Cart</li>
           </ul>
+        </div>
+        <div>
+        <h1 className="text-2xl ">{user.name}- {user.email}</h1>
         </div>
         <div>
           {
